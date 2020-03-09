@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,9 +31,14 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-area="" asp-controller="Person" asp-action="Index">Assignment 5.1</a></li>
+                    <li>
+                        <a class="navbar-link dropdown dropdown-toggle" data-toggle="dropdown"> Assignments</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Assignment" asp-action="Assignment6">Assignment 6</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -44,8 +49,8 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2019 - CIS174_TestCoreApp</p>
+        <footer class="text-muted">
+            <p>&copy; 2020 - CIS174_TestCoreApp Aleksander Brown</p>
         </footer>
     </div>
 

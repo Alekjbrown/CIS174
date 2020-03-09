@@ -1,0 +1,19 @@
+﻿@model CIS174_TestCoreApp.Models.Student
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<tr>
+    <td>
+        @Html.DisplayTextFor(model => model.FirstName)
+    </td>
+    <td>
+        @Html.DisplayTextFor(model => model.LastName)
+    </td>
+    @if (ViewBag.AccessLevel >= 8)
+    {
+        <td>
+            @Html.DisplayTextFor(model => model.Grade)
+        </td>
+    }
+</tr>

@@ -39,6 +39,5 @@ namespace CIS174_TestCoreApp.Models
 
         [Editable(false)]
         public string School { get; set; }
-
     }
 }
