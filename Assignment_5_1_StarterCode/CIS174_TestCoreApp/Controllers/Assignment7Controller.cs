@@ -7,16 +7,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CIS174_TestCoreApp.Controllers
 {
-    public class PersonController : Controller
+    public class Assignment7Controller : Controller
     {
+
         public IActionResult Index()
         {
-            var viewModel = new CreatePersonViewModel
-            {
-                School = "DMACC"
-            };
-
-            return View(viewModel);
+            //the book says nothing about initializing this and it took hours to find the problem.
+            var model = new CreatePersonViewModel();
+            model.Country = "";
+            return View(model);
         }
 
         [HttpPost]
@@ -27,7 +26,7 @@ namespace CIS174_TestCoreApp.Controllers
                 return View(model);
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Assigntment7");
         }
     }
 }

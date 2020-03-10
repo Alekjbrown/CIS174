@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CIS174_TestCoreApp</title>
+    <title>@ViewData["Title"] - CIS174_CoreApp</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -32,17 +32,24 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Person" asp-action="Index">Assignment 5.1</a></li>
                     <li>
                         <a class="navbar-link dropdown dropdown-toggle" data-toggle="dropdown"> Assignments</a>
                         <ul class="dropdown-menu">
                             <li><a asp-controller="Assignment" asp-action="Assignment6">Assignment 6</a></li>
+                            <li><a asp-controller="Assignment7" asp-action="Index">Assignment 7</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <br />
+    <environment include="Development">
+        <div class="alert-warning" style="text-align:center;">You are currently on a testing environment</div>
+    </environment>
+    <environment exclude="Development">
+        <div class="alert-success" style="text-align:center;">The environment is NOT Development</div>
+    </environment>
 
     <partial name="_CookieConsentPartial" />
 
@@ -50,7 +57,7 @@
         @RenderBody()
         <hr />
         <footer class="text-muted">
-            <p>&copy; 2020 - CIS174_TestCoreApp Aleksander Brown</p>
+            <p>&copy; 2020 - CIS174_CoreApp Aleksander Brown</p>
         </footer>
     </div>
 
